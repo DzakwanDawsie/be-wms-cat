@@ -39,8 +39,8 @@ class App {
 		this.apiPath = process.env.API_DOCS_PATH || '/api-docs';
 		this.env = process.env.NODE_ENV || 'development';
 		this.port = {
-			mobile: parseInt(process.env.PORT_MOBILE) || 3030,
-			web: parseInt(process.env.PORT_WEB) || 3040,
+			mobile: parseInt(process.env.PORT_MOBILE) || 3000,
+			web: parseInt(process.env.PORT_WEB) || 3000,
 		};
 		this.host = {
 			mobile: process.env.HOST_MOBILE || 'localhost',
