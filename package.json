@@ -13,10 +13,17 @@
 		"migrate:undo": "npx ts-node ./node_modules/sequelize-cli/lib/sequelize db:migrate:undo",
 		"seed:undo": "npx ts-node ./node_modules/sequelize-cli/lib/sequelize db:seed:undo",
 		"seed:make": "npx ts-node ./node_modules/sequelize-cli/lib/sequelize seed:generate --name",
-		"build": "tsc && npx tsc-alias",
+		"build": "rimraf dist && tsc && npx tsc-alias",
 		"start:prod": "node dist/server.js",
-		"deploy": "npm run build && pm2 start npm --name 'Stock Management API' -- run start:prod"
+		"deploy": "npm run build && pm2 start npm --name 'Stock Management API' -- run start:prod",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist"
 	},
+  "pre-commit": [
+		"ts.check",
+		"build",
+		"add-build"
+	],
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
@@ -65,6 +72,8 @@
 		"@types/swagger-ui-express": "^4.1.6",
 		"dotenv-cli": "^7.4.2",
 		"nodemon": "^3.0.2",
+		"pre-commit": "^1.2.2",
+		"rimraf": "^6.0.1",
 		"sequelize-cli": "^6.6.2",
 		"ts-node": "^10.9.2",
 		"tsconfig-paths": "^4.2.0",
