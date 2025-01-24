@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.stream = exports.logger = void 0;
 const tslib_1 = require("tslib");
@@ -7,7 +8,8 @@ const path_1 = tslib_1.__importDefault(require("path"));
 const winston_1 = tslib_1.__importDefault(require("winston"));
 const winston_daily_rotate_file_1 = tslib_1.__importDefault(require("winston-daily-rotate-file"));
 // logs-dir
-const logDir = path_1.default.join(__dirname, '..', process.env.LOG_DIR || 'logs');
+const logDir = (_a = process.env.LOG_FULLDIR) !== null && _a !== void 0 ? _a : path_1.default.join(__dirname, '..', process.env.LOG_DIR || 'logs');
+// const logDir: string = path.join(__dirname,'..', process.env.LOG_DIR || 'logs');
 if (!fs_1.default.existsSync(logDir)) {
     fs_1.default.mkdirSync(logDir);
 }
