@@ -4,7 +4,7 @@ const tslib_1 = require("tslib");
 process.env['NODE_CONFIG_DIR'] = __dirname + '/configs';
 const compression_1 = tslib_1.__importDefault(require("compression"));
 const cors_1 = tslib_1.__importDefault(require("cors"));
-const config_1 = require("@/configs/config");
+const config_1 = require("./configs/config");
 const express_1 = tslib_1.__importDefault(require("express"));
 const helmet_1 = tslib_1.__importDefault(require("helmet"));
 const hpp_1 = tslib_1.__importDefault(require("hpp"));
@@ -12,10 +12,10 @@ const morgan_1 = tslib_1.__importDefault(require("morgan"));
 const swagger_jsdoc_1 = tslib_1.__importDefault(require("swagger-jsdoc"));
 const swagger_ui_express_1 = tslib_1.__importDefault(require("swagger-ui-express"));
 const body_parser_1 = tslib_1.__importDefault(require("body-parser"));
-const databases_1 = tslib_1.__importDefault(require("@/databases"));
-const error_middleware_1 = tslib_1.__importDefault(require("@/middlewares/error.middleware"));
-const logger_1 = require("@/configs/logger");
-const swaggerConfig_1 = require("swaggerConfig");
+const databases_1 = tslib_1.__importDefault(require("./databases"));
+const error_middleware_1 = tslib_1.__importDefault(require("./middlewares/error.middleware"));
+const logger_1 = require("./configs/logger");
+const swaggerConfig_1 = require("./swaggerConfig");
 const multer_1 = tslib_1.__importDefault(require("multer"));
 class App {
     constructor(routes) {

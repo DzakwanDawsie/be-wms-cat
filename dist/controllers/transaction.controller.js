@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const resMsg_dto_1 = require("@/dtos/resMsg.dto");
-const transaction_service_1 = tslib_1.__importDefault(require("@/services/transaction.service"));
+const resMsg_dto_1 = require("../dtos/resMsg.dto");
+const transaction_service_1 = tslib_1.__importDefault(require("../services/transaction.service"));
 class TransactionController {
     constructor() {
         this.transactionService = new transaction_service_1.default();

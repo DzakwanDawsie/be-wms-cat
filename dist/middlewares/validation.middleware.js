@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
-const HttpException_1 = require("@/exceptions/HttpException");
+const HttpException_1 = require("../exceptions/HttpException");
 const validationMiddleware = (type, value = 'body', skipMissingProperties = false, whitelist = true, forbidNonWhitelisted = true) => {
     return async (req, res, next) => {
         try {

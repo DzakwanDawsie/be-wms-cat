@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const resMsg_dto_1 = require("@/dtos/resMsg.dto");
-const dropdown_service_1 = tslib_1.__importDefault(require("@/services/dropdown.service"));
+const resMsg_dto_1 = require("../dtos/resMsg.dto");
+const dropdown_service_1 = tslib_1.__importDefault(require("../services/dropdown.service"));
 class DropdownController {
     constructor() {
         this.DropdownService = new dropdown_service_1.default();

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const resMsg_dto_1 = require("../dtos/resMsg.dto");
-const logger_1 = require("@/configs/logger");
+const logger_1 = require("../configs/logger");
 const errorMiddleware = (error, req, res, next) => {
     try {
         const status = error.code || 500;

@@ -1,5 +1,5 @@
 import { NextFunction, Response } from 'express';
-import { Role } from '@/utils/enum.utils';
+import { Role } from '../utils/enum.utils';
 interface RoleMiddlewareOptions {
     roles: Role[];
 }

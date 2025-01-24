@@ -22,7 +22,7 @@ const generateAccessTokenOfficer = (payload) => {
         data: Object.assign({}, payload),
     };
     const Generate = jsonwebtoken_1.default.sign(data, secretKey, {
-        expiresIn: 3600,
+        expiresIn: process.env.JWT_EXPIRES_IN,
     });
     return Generate;
 };

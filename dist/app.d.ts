@@ -1,6 +1,6 @@
 import express from 'express';
-import { RouteMap } from '@/interfaces/routes.interface';
-import { AppType } from '@/interfaces/AppType.interface';
+import { RouteMap } from './interfaces/routes.interface';
+import { AppType } from './interfaces/AppType.interface';
 declare class App {
     appMobile: express.Application;
     appWeb: express.Application;
