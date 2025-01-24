@@ -12,12 +12,14 @@ const unit_model_1 = tslib_1.__importDefault(require("../models/unit.model"));
 const unit_size_model_1 = tslib_1.__importDefault(require("../models/unit_size.model"));
 const product_history_model_1 = tslib_1.__importDefault(require("../models/product-history.model"));
 const config_1 = require("../configs/config");
+const pg_1 = tslib_1.__importDefault(require("pg"));
 const { database, username, password, host, port, dialect } = config_1.config;
 const poolMax = config_1.config.pool.max;
 const poolMin = config_1.config.pool.min;
 const sequelize = new sequelize_1.default.Sequelize(database, username, password, {
     host: host,
     dialect: dialect || 'mysql',
+    dialectModule: pg_1.default,
     dialectOptions: {
         ssl: {
             require: true,

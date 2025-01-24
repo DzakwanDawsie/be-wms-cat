@@ -9,6 +9,7 @@ import UnitModel from '@/models/unit.model';
 import UnitSizeModel from '@/models/unit_size.model';
 import ProductHistoryModel from '@/models/product-history.model';
 import { config } from '@/configs/config';
+import pg from "pg";
 
 const { database, username, password, host, port, dialect } = config;
 const poolMax = config.pool.max;
@@ -17,6 +18,7 @@ const poolMin = config.pool.min;
 const sequelize = new Sequelize.Sequelize(database, username, password, {
 	host: host,
 	dialect: dialect || 'mysql',
+  dialectModule: pg,
   dialectOptions: {
     ssl: {
       require: true,
