@@ -17,6 +17,12 @@ const poolMin = config.pool.min;
 const sequelize = new Sequelize.Sequelize(database, username, password, {
 	host: host,
 	dialect: dialect || 'mysql',
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
 	port: Number(port),
 	timezone: '+07:00',
 	define: {

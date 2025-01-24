@@ -9,6 +9,12 @@ module.exports = {
 		port: process.env.DB_PORT,
 		dialect: process.env.DB_DIALECT,
 		logging: false,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
 	},
 	test: {
 		username: process.env.DB_USERNAME,
@@ -18,6 +24,12 @@ module.exports = {
 		port: process.env.DB_PORT,
 		dialect: process.env.DB_DIALECT,
 		logging: false,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
 	},
 	production: {
 		username: process.env.DB_USERNAME,
@@ -33,5 +45,11 @@ module.exports = {
 			acquire: 30000,
 			idle: 10000,
 		},
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
 	},
 };
