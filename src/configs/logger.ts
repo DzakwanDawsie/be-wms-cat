@@ -4,7 +4,8 @@ import winston from 'winston';
 import winstonDaily from 'winston-daily-rotate-file';
 
 // logs-dir
-const logDir: string = path.join(__dirname,'..', process.env.LOG_DIR || 'logs');
+const logDir: string = process.env.LOG_FULLDIR ?? path.join(__dirname,'..', process.env.LOG_DIR || 'logs');
+// const logDir: string = path.join(__dirname,'..', process.env.LOG_DIR || 'logs');
 
 if (!fs.existsSync(logDir)) {
 	fs.mkdirSync(logDir);
