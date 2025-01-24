@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const resMsg_dto_1 = require("../dtos/resMsg.dto");
-const product_service_1 = tslib_1.__importDefault(require("../services/product.service"));
+const resMsg_dto_1 = require("@/dtos/resMsg.dto");
+const product_service_1 = tslib_1.__importDefault(require("@/services/product.service"));
 class ProductController {
     constructor() {
         this.ProductService = new product_service_1.default();

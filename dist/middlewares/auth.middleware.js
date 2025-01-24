@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const databases_1 = tslib_1.__importDefault(require("../databases"));
+const databases_1 = tslib_1.__importDefault(require("@/databases"));
 const jsonwebtoken_1 = tslib_1.__importDefault(require("jsonwebtoken"));
 const authMiddleware = (req, res, next) => {
     try {

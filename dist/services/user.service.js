@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const databases_1 = tslib_1.__importDefault(require("../databases"));
-const HttpException_1 = require("../exceptions/HttpException");
+const databases_1 = tslib_1.__importDefault(require("@/databases"));
+const HttpException_1 = require("@/exceptions/HttpException");
 const bcrypt_1 = tslib_1.__importDefault(require("bcrypt"));
-const utils_utils_1 = require("../utils/utils.utils");
+const utils_utils_1 = require("@/utils/utils.utils");
 class UserService {
     constructor() {
         this.User = databases_1.default.User;

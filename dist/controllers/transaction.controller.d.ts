@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import TransactionService from '../services/transaction.service';
+import TransactionService from '@/services/transaction.service';
 declare class TransactionController {
     transactionService: TransactionService;
     getListTransaction: (req: Request, res: Response, next: NextFunction) => Promise<void>;

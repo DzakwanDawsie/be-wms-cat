@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const express_1 = require("express");
-const auth_middleware_1 = tslib_1.__importDefault(require("../../middlewares/auth.middleware"));
-const role_middleware_1 = tslib_1.__importDefault(require("../../middlewares/role.middleware"));
-const enum_utils_1 = require("../../utils/enum.utils");
-const dashboard_controller_1 = tslib_1.__importDefault(require("../../controllers/dashboard.controller"));
+const auth_middleware_1 = tslib_1.__importDefault(require("@/middlewares/auth.middleware"));
+const role_middleware_1 = tslib_1.__importDefault(require("@/middlewares/role.middleware"));
+const enum_utils_1 = require("@/utils/enum.utils");
+const dashboard_controller_1 = tslib_1.__importDefault(require("@/controllers/dashboard.controller"));
 class DashboardRoute {
     constructor() {
         this.router = (0, express_1.Router)();

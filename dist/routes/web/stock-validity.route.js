@@ -2,12 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const express_1 = require("express");
-const stock_validity_controller_1 = tslib_1.__importDefault(require("../../controllers/stock-validity.controller"));
-const validation_middleware_1 = tslib_1.__importDefault(require("../../middlewares/validation.middleware"));
-const stock_validity_dto_1 = require("../../dtos/stock-validity.dto");
-const auth_middleware_1 = tslib_1.__importDefault(require("../../middlewares/auth.middleware"));
-const role_middleware_1 = tslib_1.__importDefault(require("../../middlewares/role.middleware"));
-const enum_utils_1 = require("../../utils/enum.utils");
+const stock_validity_controller_1 = tslib_1.__importDefault(require("@/controllers/stock-validity.controller"));
+const validation_middleware_1 = tslib_1.__importDefault(require("@/middlewares/validation.middleware"));
+const stock_validity_dto_1 = require("@/dtos/stock-validity.dto");
+const auth_middleware_1 = tslib_1.__importDefault(require("@/middlewares/auth.middleware"));
+const role_middleware_1 = tslib_1.__importDefault(require("@/middlewares/role.middleware"));
+const enum_utils_1 = require("@/utils/enum.utils");
 class StockValidityRoute {
     constructor() {
         this.router = (0, express_1.Router)();

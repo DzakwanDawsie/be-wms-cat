@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const stock_validation_service_1 = tslib_1.__importDefault(require("../services/stock-validation.service"));
+const stock_validation_service_1 = tslib_1.__importDefault(require("@/services/stock-validation.service"));
 class StockValidityController {
     constructor() {
         this.transactionService = new stock_validation_service_1.default();

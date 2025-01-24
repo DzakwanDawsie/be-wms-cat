@@ -1,4 +1,4 @@
-import { ResponseList } from '../interfaces/ResponseList.interface';
+import { ResponseList } from '@/interfaces/ResponseList.interface';
 declare class DropdownService {
     Unit: typeof import("../models/unit.model").UnitModel;
     UnitSize: typeof import("../models/unit_size.model").UnitSizeModel;

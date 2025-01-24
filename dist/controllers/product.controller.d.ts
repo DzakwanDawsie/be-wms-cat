@@ -1,5 +1,5 @@
 import { Response, NextFunction } from 'express';
-import ProductService from '../services/product.service';
+import ProductService from '@/services/product.service';
 declare class ProductController {
     ProductService: ProductService;
     getListProduct: (req: any, res: Response, next: NextFunction) => Promise<void>;

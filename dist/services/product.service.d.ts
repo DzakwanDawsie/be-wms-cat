@@ -1,9 +1,9 @@
-import { Product } from '../models/product.model';
-import { ResponseList } from '../interfaces/ResponseList.interface';
+import { Product } from '@/models/product.model';
+import { ResponseList } from '@/interfaces/ResponseList.interface';
 import { Transaction } from 'sequelize';
 declare class ProductService {
     User: typeof import("../models/user.model").UserModel;
-    Product: typeof import("../models/product.model").ProductModel;
+    Product: typeof import("@/models/product.model").ProductModel;
     Unit: typeof import("../models/unit.model").UnitModel;
     UnitSize: typeof import("../models/unit_size.model").UnitSizeModel;
     Type: typeof import("../models/type.model").TypeModel;
